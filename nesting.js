@@ -50,9 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
-
-
+function employeeUpdater(){
+  for (let i = 0; i < employees.length; i++){
+    for (let key in employees[i]){
+      if (employees[i][key] === "Theo"){
+        employees.splice(i, 1)
+      } else if (employees[i][key] === "Lorie"){
+        employees[i].department = "HR"
+      }
+    }
+  }
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
